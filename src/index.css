@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+    
+}
+html, body{
+  height: 100%;
+}
+#root,.app {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(218, 218, 218);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 1em;
+}
+.container-main{
+  height: 700px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.container-main-currency{
+  height: 700px;
+  width: 700px;
+  
+}
+
+.card{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  animation: 2s hideCard linear;
+  transition: transform 0.5s;
+}
+@keyframes hideCard{
+  0%, 70%{
+    transform: rotateY(0);
+  }
+  100%{
+    transform: rotateY(0);
+  }
+}
+.card img{
+  max-width: 80%;
+  max-height: 80%;
+  transition: transform 0.5s;
+  transform: scale(0);
+  animation: 2s hideImage linear;
+}
+@keyframes hideImage{
+  0%, 70%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+.card.active{
+  transform: rotateY(0);
+}
+.card.correct{
+  background-color: #65e469;
+  animation: 4s  linear;
+}
+.card.wrong{
+  background-color: #fd245a;
+}
+.card.active img{
+  transform: scale(1);
+  animation: 4s  linear;
+}
+
+ 
+
+.modalStyles {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 100%;
+  animation: 2s linear;
+  transition: transform 0.5s;
+}
+
+.modalStyles h2{
+  font-size: 80px;
+}
+
+.modalStyles button {
+  background-color: #b72222; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+ 
+.modalStylesWinner
+
+{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 100%;
+  animation: 2s linear;
+  transition: transform 0.5s;
+}
+
+.modalStylesWinner h2{
+  font-size: 80px;
+}
+
+.modalStylesWinner button {
+  background-color: #27b722; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
